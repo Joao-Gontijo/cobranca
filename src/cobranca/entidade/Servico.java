@@ -14,6 +14,10 @@ public class Servico {
 	
     private String nome;
 
+    public Servico() {
+		// TODO Auto-generated constructor stub
+	}
+    
 	public Long getId() {
 		return id;
 	}

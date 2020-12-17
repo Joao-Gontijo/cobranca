@@ -15,6 +15,10 @@ public class Municipio {
 	private String nome;
 	private String UF;
 
+	public Municipio() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public int getId() {
 		return id;
 	}

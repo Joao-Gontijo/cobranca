@@ -1,5 +1,5 @@
 package cobranca.services;
 
-public class ServicoService {
+public class ServicoDAO {
 
 }
