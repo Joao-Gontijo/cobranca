@@ -19,7 +19,7 @@ public class ClienteDAO {
 	
 	public void salvar(Cliente cliente) {
 		em.getTransaction().begin();
-		Cliente existente = get(cliente.getId()); //ID TO LOAD IS REQUIRED FOR LOADING
+		Cliente existente = get(cliente.getCnpj()); //ID TO LOAD IS REQUIRED FOR LOADING
 		if(existente == null) {
 			em.persist(cliente);
 		} else {
@@ -50,8 +50,8 @@ public class ClienteDAO {
 		return qry.getResultList();
 	}
 	
-	public Cliente get(Long id) {
-		return em.find(Cliente.class, id);
+	public Cliente get(String cnpj) {
+		return em.find(Cliente.class, cnpj);
 	}
 	
 }

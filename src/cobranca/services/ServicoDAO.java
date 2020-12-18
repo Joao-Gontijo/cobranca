@@ -21,14 +21,14 @@ public class ServicoDAO {
 		em.getTransaction().begin();
 		Servico existente = getServico(servico.getId());
 		
-//		if(existente == null) {
-//			em.persist(servico);
-//		} else {
-//		
-//			existente.setNome(servico.getNome());
-//			em.persist(existente);
-//		}
-		em.persist(servico);
+		if(existente == null) {
+			em.persist(servico);
+		} else {
+		
+			existente.setNome(servico.getNome());
+			em.persist(existente);
+		}
+//		em.persist(servico);
 		em.getTransaction().commit();
 		em.close();
 	}
@@ -47,17 +47,6 @@ public class ServicoDAO {
 		servicoEncontrado = em.find(Servico.class, id);
 		return servicoEncontrado;
 	}
-	
-//	public ArrayList<Servico> buscar(String nome) {
-//		EntityManager em = JPAUtil.getEntityManager();
-//		ArrayList<Servico> listaDeServicos = new ArrayList<>();
-//
-//		Query query = em.createQuery("from Servico where nome ='" + nome + "'");
-//
-//		listaDeServicos = (ArrayList<Servico>) query.getResultList();
-//
-//		return listaDeServicos;
-//	}
 	
 	public List<Servico> lista(){
 		TypedQuery<Servico> qry = em.createQuery("from Servico", Servico.class);

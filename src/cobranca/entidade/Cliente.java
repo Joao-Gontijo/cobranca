@@ -10,11 +10,12 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Cliente {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+//	@Id
+//	@GeneratedValue(strategy = GenerationType.IDENTITY)
+//	private Long id;
 	
-	@Column(unique = true)
+	@Id
+//	@Column(unique = true)
 	private String cnpj;
 
 	private String nome;
@@ -44,13 +45,13 @@ public class Cliente {
 //		this.municipio = municipio;
 	}
 
-	public Long getId() {
-		return id;
-	}
-	
-	public void setId(Long id) {
-		this.id = id;
-	}
+//	public Long getId() {
+//		return id;
+//	}
+//	
+//	public void setId(Long id) {
+//		this.id = id;
+//	}
 
 	public Cliente(String cnpj2, String nome2, String nomeFantasia2, String cep2, String logradouro2, String numero2,
 			String complemento2, String uf, String municipio2) {

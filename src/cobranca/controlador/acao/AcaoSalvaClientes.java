@@ -19,13 +19,6 @@ public class AcaoSalvaClientes {
 		Utilitario util = new Utilitario();
 		Cliente cliente = new Cliente();
 		
-		String id = null;
-		id = req.getParameter("id");
-
-		System.out.println("ID: " + id);
-		if (util.isNumeric(id)) {
-			cliente.setId(Long.parseLong(id));
-		}
 		
 		String cnpj = req.getParameter("input-cnpj");
 		System.out.println(cnpj);

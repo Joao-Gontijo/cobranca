@@ -17,7 +17,7 @@ public class Servico {
     public Servico() {
 		// TODO Auto-generated constructor stub
 	}
-    
+
 	public Long getId() {
 		return id;
 	}
