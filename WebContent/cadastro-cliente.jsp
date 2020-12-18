@@ -7,7 +7,8 @@
 <title>Cadastro de Clientes</title>
 </head>
 <body>
-<form action="alunos" method="post">
+<form action="clientes" method="post">
+		<input type="hidden" name="id" id="id" />
 		CNPJ <input type="text" name="input-cnpj" size="30"/>
 		Nome <input type="text" name="input-nome" size="70"/>
 		<p>Nome Fantasia <input type="text" name="input-nomeFantasia" size="70"/></p>

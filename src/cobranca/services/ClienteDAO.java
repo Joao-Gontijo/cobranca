@@ -19,7 +19,7 @@ public class ClienteDAO {
 	
 	public void salvar(Cliente cliente) {
 		em.getTransaction().begin();
-		Cliente existente = get(cliente.getCnpj());
+		Cliente existente = get(cliente.getId()); //ID TO LOAD IS REQUIRED FOR LOADING
 		if(existente == null) {
 			em.persist(cliente);
 		} else {
@@ -30,7 +30,7 @@ public class ClienteDAO {
 			existente.setLogradouro(cliente.getLogradouro());
 			existente.setNumero(cliente.getNumero());
 			existente.setComplemento(cliente.getComplemento());
-			existente.setMunicipio(cliente.getMunicipio());
+//			existente.setMunicipio(cliente.getMunicipio());
 			em.persist(existente);
 		}
 		em.getTransaction().commit();
@@ -50,8 +50,8 @@ public class ClienteDAO {
 		return qry.getResultList();
 	}
 	
-	public Cliente get(String cnpj) {
-		return em.find(Cliente.class, cnpj);
+	public Cliente get(Long id) {
+		return em.find(Cliente.class, id);
 	}
 	
 }
