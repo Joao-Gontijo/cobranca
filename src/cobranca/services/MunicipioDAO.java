@@ -9,6 +9,7 @@ import cobranca.entidade.Municipio;
 import cobranca.jpa.util.JPAUtil;
 
 public class MunicipioDAO {
+	
 	public void salvar(Municipio municipio) {
 		EntityManager em = JPAUtil.getEntityManager();
 		em.getTransaction().begin();
