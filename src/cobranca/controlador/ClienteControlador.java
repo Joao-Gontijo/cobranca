@@ -31,9 +31,6 @@ public class ClienteControlador extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-		new AcaoSalvaClientes(req);
-
 		String pagina = new AcaoSalvaClientes(req).executa();
 		RequestDispatcher dispatcher = req.getRequestDispatcher(pagina);
 		dispatcher.forward(req, resp);
