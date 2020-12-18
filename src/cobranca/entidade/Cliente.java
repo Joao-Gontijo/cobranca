@@ -27,6 +27,11 @@ public class Cliente {
 
 	}
 
+	public Cliente(String cnpj2, String nome2, String nomeFantasia2, String cep2, String logradouro2, String numero2,
+			String complemento2, String uf, String municipio2) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getCnpj() {
 		return cnpj;
 	}
