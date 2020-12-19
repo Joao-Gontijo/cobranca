@@ -6,12 +6,42 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Clientes</title>
+	
+	<style type="text/css">
+		a.button {
+			background-color: #9A9898;
+    	    border: solid 1px black;
+    	    border-radius:5px;
+    	    color: black;
+    	    padding: 5px 14px;
+    	    text-align: center;
+    	    text-decoration: none;
+    	    display: inline-block;
+    	    font-size: 20px;
+    	    margin: 4px 2px;
+    	    cursor: pointer;
+		}
+		
+		.tbl th {
+			border-collapse: collapse;
+			padding: 20px;
+		}
+		
+		.tbl td {
+			padding: 2px 20px;
+		}
+	</style>
 </head>
 <body>
 
+
+
 	<h1>Clientes</h1>
-	<a href="cadastro-cliente.jsp">Novo Cliente</a> 
-	<table>
+	
+	
+
+	<a href="cadastro-cliente.jsp" class="button">Novo Cliente</a>
+	<table class="tbl" border="1">
 		
 		<thead>
 			<tr>
@@ -24,6 +54,8 @@
 				<th>COMPLEMENTO</th>
 				<th>UF</th>
 				<th>MUNICIPIO</th>
+				<th>EDITAR</th>
+				<th>EXCLUIR</th>
 			</tr>
 		</thead>
 		<tbody>

@@ -40,6 +40,7 @@ public class ServicoControlador extends HttpServlet{
 					String pagina = new AcaoExcluiServico(req).executa();
 					RequestDispatcher dispatcher = req.getRequestDispatcher(pagina);
 					dispatcher.forward(req, resp);
+					resp.sendRedirect("servicos.jsp");
 				}
 			}
 		} else {

@@ -13,7 +13,7 @@
 	
 	<a href="cadastro-servicos.jsp">Novo serviço</a>
 	
-	<table>
+	<table border="1">
 		<thead>
 			<tr>
 <!-- 				<th>ID</th> -->

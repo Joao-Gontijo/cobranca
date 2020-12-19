@@ -7,8 +7,6 @@
 <title>Cadastro de Serviços</title>
 </head>
 <body>
-
-	<a href=""></a>
 	
 	<form action="servicos" method="post">
 		<input type="hidden" name="id" id="id" value="${servico.getId()}" />
