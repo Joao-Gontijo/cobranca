@@ -16,14 +16,17 @@ public class AcaoSalvaServicos {
 	public String executa() {
 		
 		Servico servico = new Servico();
-		ServicoDAO dao = new ServicoDAO();
-		
 		String idString = req.getParameter("id"); //Não tá chegando nada aqui
-
-		System.out.println("OLHA O ID AQUIIIIIII " + idString);
+		
+		if(idString != "") {
+			System.out.println("tá entrando aqui");
+			long id = Long.parseLong(idString);
+			servico.setId(id);
+		}
 		
 		String nome = req.getParameter("input-nome");
 		servico.setNome(nome);
+		ServicoDAO dao = new ServicoDAO();
 		dao.salvar(servico);
 		
 		String pagina = new AcaoListagemServicos(req).executa();

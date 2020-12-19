@@ -26,7 +26,6 @@ public class ServicoControlador extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String acao = req.getParameter("acao");
 		String id = req.getParameter("id");
-		System.out.println("OLHA O ID DA SERVLET AQUI" + id);
 		if(acao != null) {
 			if(acao.equals("editar")) {
 				if(id != null) {
@@ -51,6 +50,7 @@ public class ServicoControlador extends HttpServlet{
 	}
 	
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//		String id = req.getParameter("id");
 		String pagina = new AcaoSalvaServicos(req).executa();
 		RequestDispatcher dispatcher = req.getRequestDispatcher(pagina);
 		dispatcher.forward(req, resp);

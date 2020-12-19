@@ -20,7 +20,7 @@ public class ServicoDAO {
 	public void salvar(Servico servico) {
 		em.getTransaction().begin();
 		Servico existente = getServico(servico.getId());
-		
+		System.out.println(existente);
 		if(existente == null) {
 			em.persist(servico);
 		} else {
