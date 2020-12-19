@@ -11,6 +11,8 @@
 
 <h1>Servicos</h1>
 	
+	<a href="cadastro-servicos.jsp">Novo serviço</a>
+	
 	<table>
 		<thead>
 			<tr>

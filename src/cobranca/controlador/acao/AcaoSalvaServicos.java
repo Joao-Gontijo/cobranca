@@ -16,10 +16,9 @@ public class AcaoSalvaServicos {
 	public String executa() {
 		
 		Servico servico = new Servico();
-		String idString = req.getParameter("id"); //Não tá chegando nada aqui
+		String idString = req.getParameter("id");
 		
 		if(idString != "") {
-			System.out.println("tá entrando aqui");
 			long id = Long.parseLong(idString);
 			servico.setId(id);
 		}

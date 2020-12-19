@@ -25,7 +25,7 @@
 			<option selected>---></option>
 		</select>
 		
-		Municipio <select id="municipio" name="cbx-municipio" style="width:300px">
+		Municipio <select required id="municipio" name="cbx-municipio" style="width:300px">
 		<option selected></option>
 		</select>
 		
