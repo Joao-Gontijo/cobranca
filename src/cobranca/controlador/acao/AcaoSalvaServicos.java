@@ -14,13 +14,15 @@ public class AcaoSalvaServicos {
 	}
 	
 	public String executa() {
+		
 		Servico servico = new Servico();
-//		String idString = req.getParameter("id");
-		String nome = req.getParameter("input-nome");
 		ServicoDAO dao = new ServicoDAO();
 		
-//		Long id = Long.parseLong(idString);
-//		servico.setId(id);
+		String idString = req.getParameter("id"); //Não tá chegando nada aqui
+
+		System.out.println("OLHA O ID AQUIIIIIII " + idString);
+		
+		String nome = req.getParameter("input-nome");
 		servico.setNome(nome);
 		dao.salvar(servico);
 		

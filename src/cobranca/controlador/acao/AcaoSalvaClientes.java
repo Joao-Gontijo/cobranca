@@ -5,8 +5,6 @@ import javax.servlet.http.HttpServletRequest;
 import cobranca.entidade.Cliente;
 import cobranca.services.ClienteDAO;
 
-import cobranca.util.Utilitario;
-
 public class AcaoSalvaClientes {
 
 	private HttpServletRequest req;
@@ -16,22 +14,19 @@ public class AcaoSalvaClientes {
 	}
 	
 	public String executa() {
-		Utilitario util = new Utilitario();
+		
 		Cliente cliente = new Cliente();
 		
 		
 		String cnpj = req.getParameter("input-cnpj");
-		System.out.println(cnpj);
-
 		String nome = req.getParameter("input-nome");
 		String nomeFantasia = req.getParameter("input-nomeFantasia");
 		String cep = req.getParameter("input-cep");
 		String logradouro = req.getParameter("input-logradouro");
 		String numero = req.getParameter("input-numero");
 		String complemento = req.getParameter("input-complemento");
-		System.out.println(complemento);
-//		String uf = req.getParameter("cbx-uf");
-//		String municipio = req.getParameter("cbx-municipio");
+		String uf = req.getParameter("cbx-uf");
+		String municipio = req.getParameter("cbx-municipio");
 //		Cliente cliente = new Cliente(cnpj, nome, nomeFantasia, cep, logradouro, numero, 
 //				complemento, uf, municipio);
 		cliente.setCnpj(cnpj);
@@ -41,6 +36,8 @@ public class AcaoSalvaClientes {
 		cliente.setLogradouro(logradouro);
 		cliente.setNumero(numero);
 		cliente.setComplemento(complemento);
+		cliente.setUf(uf);
+		cliente.setMunicipio(municipio);
 		ClienteDAO dao = new ClienteDAO();
 		dao.salvar(cliente);
 		

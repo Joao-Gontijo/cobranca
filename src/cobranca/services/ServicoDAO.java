@@ -24,11 +24,9 @@ public class ServicoDAO {
 		if(existente == null) {
 			em.persist(servico);
 		} else {
-		
 			existente.setNome(servico.getNome());
 			em.persist(existente);
 		}
-//		em.persist(servico);
 		em.getTransaction().commit();
 		em.close();
 	}
@@ -53,7 +51,7 @@ public class ServicoDAO {
 		return qry.getResultList();
 	}
 	
-	public Servico getServico(Long id) {
+	public Servico getServico(long id) {
 		return em.find(Servico.class, id);
 	}
 	

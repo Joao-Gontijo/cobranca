@@ -15,9 +15,12 @@ public class AcaoCarregaDadosServico {
 	}
 	
 	public String executa() {
+		
+		Servico servico = new Servico();
 		String idString = req.getParameter("id");
-		Long id = Long.parseLong(idString);
-		Servico servico = new ServicoDAO().getServico(id);
+		long id = Long.parseLong(idString);
+		
+		servico = new ServicoDAO().getServico(id);
 		req.setAttribute("servico", servico);
 		return "cadastro-servicos.jsp";
 	}

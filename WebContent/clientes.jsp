@@ -10,7 +10,7 @@
 <body>
 
 	<h1>Clientes</h1>
-	
+	<a href="cadastro-cliente.jsp">Novo Cliente</a> 
 	<table>
 		
 		<thead>
@@ -22,6 +22,8 @@
 				<th>LOGRADOURO</th>
 				<th>NUMERO</th>
 				<th>COMPLEMENTO</th>
+				<th>UF</th>
+				<th>MUNICIPIO</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -34,8 +36,8 @@
  					<td>${a.logradouro}</td>
  					<td>${a.numero}</td>
  					<td>${a.complemento}</td>
-<%--  					<td>${a.uf}</td> --%>
-<%--  					<td>${a.municipio}</td> --%>
+ 					<td>${a.uf}</td>
+ 					<td>${a.municipio}</td>
  					<td><a href="clientes?cnpj=${a.cnpj}&acao=editar">editar</a></td>
  					<td><a href="clientes?cnpj=${a.cnpj}&acao=excluir">excluir</a></td>
  				</tr>

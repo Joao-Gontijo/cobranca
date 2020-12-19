@@ -10,13 +10,14 @@ public class Servico {
    
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private long id;
 	
     private String nome;
 
     public Servico() {
 		// TODO Auto-generated constructor stub
 	}
+
 
 	public Long getId() {
 		return id;

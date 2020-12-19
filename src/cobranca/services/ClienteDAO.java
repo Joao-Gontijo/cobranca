@@ -19,7 +19,7 @@ public class ClienteDAO {
 	
 	public void salvar(Cliente cliente) {
 		em.getTransaction().begin();
-		Cliente existente = get(cliente.getCnpj()); //ID TO LOAD IS REQUIRED FOR LOADING
+		Cliente existente = get(cliente.getCnpj());
 		if(existente == null) {
 			em.persist(cliente);
 		} else {
@@ -30,7 +30,8 @@ public class ClienteDAO {
 			existente.setLogradouro(cliente.getLogradouro());
 			existente.setNumero(cliente.getNumero());
 			existente.setComplemento(cliente.getComplemento());
-//			existente.setMunicipio(cliente.getMunicipio());
+			existente.setUf(cliente.getUf());
+			existente.setMunicipio(cliente.getMunicipio());
 			em.persist(existente);
 		}
 		em.getTransaction().commit();
