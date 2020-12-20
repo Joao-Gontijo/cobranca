@@ -11,18 +11,18 @@
 <form action="clientes" method="post">
 
 		<input type="hidden" name="id" id="id" />
-		CNPJ <input type="text" name="input-cnpj" size="30" value="${cliente.getCnpj()}"/>
-		Nome <input type="text" name="input-nome" size="70" value="${cliente.getNome()}"/>
-		<p>Nome Fantasia <input type="text" name="input-nomeFantasia" size="70" value="${cliente.getNomeFantasia()}"/></p>
+		CNPJ <input required type="text" name="input-cnpj" size="30" value="${cliente.getCnpj()}"/>
+		Nome <input required type="text" name="input-nome" size="70" value="${cliente.getNome()}"/>
+		<p>Nome Fantasia <input required type="text" name="input-nomeFantasia" size="70" value="${cliente.getNomeFantasia()}"/></p>
 		
-		<p>CEP <input type="text" name="input-cep" size="30" value="${cliente.getCep()}"/>
-		Logradouro <input type="text" name="input-logradouro" size="70" value="${cliente.getLogradouro()}"/></p>
+		<p>CEP <input required type="text" name="input-cep" size="30" value="${cliente.getCep()}"/>
+		Logradouro <input required type="text" name="input-logradouro" size="70" value="${cliente.getLogradouro()}"/></p>
 		
-		<p>Numero <input type="text" name="input-numero" size="30" value="${cliente.getNumero()}"/>
-		Complemento <input type="text" name="input-complemento" size="70" value="${cliente.getComplemento()}"/></p>
+		<p>Numero <input required type="text" name="input-numero" size="30" value="${cliente.getNumero()}"/>
+		Complemento <input required type="text" name="input-complemento" size="70" value="${cliente.getComplemento()}"/></p>
 		
-		<p>UF <select id="uf" name="cbx-uf" style="width:60px">
-			<option selected>---></option>
+		<p>UF <select required id="uf" name="cbx-uf" style="width:60px">
+			<option selected>----></option>
 		</select>
 		
 		Municipio <select required id="municipio" name="cbx-municipio" style="width:300px">

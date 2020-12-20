@@ -5,13 +5,38 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 <title>Serviços</title>
 </head>
 <body>
+<header>
+		<div class="container">
+			<div class="logo">
+				<a href="index.jsp"> <img alt="" src="logo1.png">
+				</a>
+			</div>
 
+			<div class="menu">
+
+				<nav>
+					<ul>
+						<li><a href="index.jsp"> INICIO </a></li>
+						
+						
+						<li><a href="clientes"> CLIENTES </a></li>
+						<li><a href="servicos"> SERVIÇOS </a></li>
+						
+					</ul>
+				</nav>
+				
+			</div>
+
+		</div>
+
+	</header>
 <h1>Servicos</h1>
 	
-	<a href="cadastro-servicos.jsp">Novo serviço</a>
+	<a href="cadastro-cliente.jsp" class="button">Novo Cliente</a>
 	
 	<table border="1">
 		<thead>
