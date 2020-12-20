@@ -1,18 +1,22 @@
 package cobranca.entidade;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class Cliente {
 	
 	@Id
 	private String cnpj;
-
+	
+	@Column(nullable = false)
 	private String nome;
+	@Column(nullable = false)
 	private String nomeFantasia;
+	@Column(nullable = false)
 	private String cep;
+	@Column(nullable = false)
 	private String logradouro;
 	private String numero;
 	private String complemento;

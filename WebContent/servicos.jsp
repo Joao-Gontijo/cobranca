@@ -36,7 +36,7 @@
 	</header>
 <h1>Servicos</h1>
 	
-	<a href="cadastro-cliente.jsp" class="button">Novo Cliente</a>
+	<a href="cadastro-servicos.jsp" class="button">Novo Serviço</a>
 	
 	<table border="1">
 		<thead>

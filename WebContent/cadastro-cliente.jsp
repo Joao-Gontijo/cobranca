@@ -18,8 +18,8 @@
 		<p>CEP <input required type="text" name="input-cep" size="30" value="${cliente.getCep()}"/>
 		Logradouro <input required type="text" name="input-logradouro" size="70" value="${cliente.getLogradouro()}"/></p>
 		
-		<p>Numero <input required type="text" name="input-numero" size="30" value="${cliente.getNumero()}"/>
-		Complemento <input required type="text" name="input-complemento" size="70" value="${cliente.getComplemento()}"/></p>
+		<p>Numero <input type="text" name="input-numero" size="30" value="${cliente.getNumero()}"/>
+		Complemento <input type="text" name="input-complemento" size="70" value="${cliente.getComplemento()}"/></p>
 		
 		<p>UF <select required id="uf" name="cbx-uf" style="width:60px">
 			<option selected>----></option>
@@ -35,6 +35,7 @@
 	</form>
 </body>
 <script>
+		
 		getUF();
 		var data={};
 		const select_uf = document.getElementById('uf');

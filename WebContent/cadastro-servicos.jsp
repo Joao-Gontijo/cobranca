@@ -10,7 +10,7 @@
 	
 	<form action="servicos" method="post">
 		<input type="hidden" name="id" id="id" value="${servico.getId()}" />
-		<p><input type="text" name="input-nome" placeholder="Digite o nome" size="70" value="${servico.getNome() }"/></p>
+		<p><input required type="text" name="input-nome" placeholder="Digite o nome" size="70" value="${servico.getNome() }"/></p>
 		
 		<p><input type="submit" name="btn-salva" value="salvar"/></p>
 	</form>
