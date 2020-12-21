@@ -28,6 +28,19 @@
     	cursor: pointer;
 	}
 	
+	.btnEditar{
+		display: block;
+		text-decoration: none;
+		text-align: center;
+	}
+	
+	.btnExcluir{
+		display: block;
+		text-decoration: none;
+		text-align: center;
+		color: #FF0000;
+	}
+	
 	.container {
 		background-color: lightskyblue;
 		display: flex;
@@ -74,33 +87,6 @@
 		color: #FFF;
 	}
 	
-	.btn {
-		display: block;
-		width: 120px;
-		height: 20px;
-		padding: 8px;
-		background-color: #39aae1;
-		color: #FFF;
-		border-radius: 5px;
-		text-decoration: none;
-		text-align: center;
-		font-weight: bold;
-		font-family: Arial;
-	}
-	
-	.btnEditar{
-		display: block;
-		text-decoration: none;
-		text-align: center;
-	}
-	
-	.btnExcluir{
-		display: block;
-		text-decoration: none;
-		text-align: center;
-		color: #FF0000;
-	}
-	
 	footer {
 		position: fixed;
 		bottom: 0;
@@ -135,12 +121,12 @@
 	}
 	
 	.tbl th {
-			border-collapse: collapse;
-			padding: 20px;
-		}
+		border-collapse: collapse;
+		padding: 20px;
+	}
 		
 	.tbl td {
-			padding: 2px 20px;
+		padding: 2px 20px;
 	}
 	
 	.tblHover:hover{
@@ -152,7 +138,6 @@
 		border: 1px solid;
 		padding: 20px;
 		width: 800;
-/* 		margin: 0 auto; */
 		margin-bottom: 10px;
 	}
 	
@@ -171,4 +156,9 @@
 	.select{
 		padding: 5px;
 		font-size: 20px;
+	}
+	
+	.ativo {
+		background-color: #39aae1;
+		color: #FFF;
 	}	

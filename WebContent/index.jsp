@@ -20,7 +20,7 @@
 			<div class="menu">
 				<nav>
 					<ul>
-						<li><a href="index.jsp"> INICIO </a></li>
+						<li><a class="ativo" href="index.jsp"> INICIO </a></li>
 <!-- 						<li><a href="cadastro-cliente.jsp"> CADASTRO DE CLIENTES </a></li> -->
 						<li><a href="clientes"> CLIENTES </a></li>
 <!-- 						<li><a href="cadastro-servicos.jsp"> CADASTRO DE SERVIÇOS </a></li> -->

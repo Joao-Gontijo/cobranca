@@ -21,7 +21,7 @@
 					<ul>
 						<li><a href="index.jsp"> INICIO </a></li>
 						<li><a href="clientes"> CLIENTES </a></li>
-						<li><a href="servicos"> SERVIÇOS </a></li>
+						<li><a class="ativo" href="servicos"> SERVIÇOS </a></li>
 						
 					</ul>
 				</nav>
@@ -46,8 +46,8 @@
 			<c:forEach items="${servicos}" var="a">
  				<tr class="tblHover">
  					<td>${a.nome}</td>
- 					<td><a class="btnEditar" href="servicos?id=${a.id}&acao=editar">editar</a></td>
- 					<td><a class="btnExcluir" href="servicos?id=${a.id}&acao=excluir">excluir</a></td>
+ 					<td><a class="btnEditar" href="servicos?id=${a.id}&acao=editar"> <img alt="" src="edit.png" width="25px"> </a></td>
+ 					<td><a class="btnExcluir" href="servicos?id=${a.id}&acao=excluir"> <img alt="" src="delete.png" width="25px"></a></td>
  				</tr>
  				</c:forEach>
 		</tbody>

@@ -40,10 +40,10 @@
 		Nome <input required type="text" name="input-nome" placeholder="Ex.: João Batista da Silva" size="70" value="${cliente.getNome()}"/>
 		<p>Nome Fantasia <input required type="text" name="input-nomeFantasia" placeholder="Digite o nome fantasia aqui" size="70" value="${cliente.getNomeFantasia()}"/></p>
 		
-		<p>CEP <input required type="text" name="input-cep" size="30" placeholder="00000-000" maxlength="8" value="${cliente.getCep()}"/>
+		<p>CEP <input required type="number" name="input-cep" size="30" placeholder="00000-000" maxlength="8" value="${cliente.getCep()}"/>
 		Logradouro <input required type="text" name="input-logradouro" size="70" placeholder="Rua de Exemplo"  value="${cliente.getLogradouro()}"/></p>
 		
-		<p>Numero <input type="text" name="input-numero" size="30" maxlength="5" placeholder="00000"  value="${cliente.getNumero()}"/>
+		<p>Numero <input type="number" name="input-numero" size="30" maxlength="5" placeholder="00000"  value="${cliente.getNumero()}"/>
 		Complemento <input type="text" name="input-complemento" size="70" placeholder="Ex.: Quadra/Lote, Apartamento"  value="${cliente.getComplemento()}"/></p>
 		
 		<p>UF <select required class="select" id="uf" name="cbx-uf" style="width:80px">

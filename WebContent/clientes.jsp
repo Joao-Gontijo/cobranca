@@ -22,7 +22,7 @@
 				<nav>
 					<ul>
 						<li><a href="index.jsp"> INICIO </a></li>
-						<li><a href="clientes"> CLIENTES </a></li>
+						<li><a class="ativo" href="clientes"> CLIENTES </a></li>
 						<li><a href="servicos"> SERVIÇOS </a></li>
 						
 					</ul>
@@ -65,8 +65,8 @@
  					<td>${a.complemento}</td>
  					<td>${a.uf}</td>
  					<td>${a.municipio}</td>
- 					<td><a class="btnEditar" href="clientes?cnpj=${a.cnpj}&acao=editar">Editar</a></td>
- 					<td><a class="btnExcluir" href="clientes?cnpj=${a.cnpj}&acao=excluir">Excluir</a></td>
+ 					<td><a class="btnEditar" href="clientes?cnpj=${a.cnpj}&acao=editar"> <img alt="" src="edit.png" width="25px"></a></td>
+ 					<td><a class="btnExcluir" href="clientes?cnpj=${a.cnpj}&acao=excluir"> <img alt="" src="delete.png" width="25px"></a></td>
  				</tr>
  				</c:forEach>
 		</tbody>
