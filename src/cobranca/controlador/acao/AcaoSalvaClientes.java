@@ -17,7 +17,6 @@ public class AcaoSalvaClientes {
 		
 		Cliente cliente = new Cliente();
 		
-		
 		String cnpj = req.getParameter("input-cnpj");
 		String nome = req.getParameter("input-nome");
 		String nomeFantasia = req.getParameter("input-nomeFantasia");
@@ -27,8 +26,6 @@ public class AcaoSalvaClientes {
 		String complemento = req.getParameter("input-complemento");
 		String uf = req.getParameter("cbx-uf");
 		String municipio = req.getParameter("cbx-municipio");
-//		Cliente cliente = new Cliente(cnpj, nome, nomeFantasia, cep, logradouro, numero, 
-//				complemento, uf, municipio);
 		cliente.setCnpj(cnpj);
 		cliente.setNome(nome);
 		cliente.setNomeFantasia(nomeFantasia);
@@ -44,7 +41,4 @@ public class AcaoSalvaClientes {
 		String pagina = new AcaoListagemClientes(req).executa();
 		return pagina;
 	}
-	
-	//id to load is required for loading ERRO ERRO ERRO ERRO ERRO ERRO ERRO ERRO ERRO 
-	
 }

@@ -4,9 +4,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-<title>Serviços</title>
+	<meta charset="ISO-8859-1">
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+	<title>Serviços</title>
 </head>
 <body>
 <header>
@@ -17,12 +17,9 @@
 			</div>
 
 			<div class="menu">
-
 				<nav>
 					<ul>
 						<li><a href="index.jsp"> INICIO </a></li>
-						
-						
 						<li><a href="clientes"> CLIENTES </a></li>
 						<li><a href="servicos"> SERVIÇOS </a></li>
 						
@@ -34,27 +31,37 @@
 		</div>
 
 	</header>
-<h1>Servicos</h1>
 	
 	<a href="cadastro-servicos.jsp" class="button">Novo Serviço</a>
 	
-	<table border="1">
+	<table  class="tbl" border="1">
 		<thead>
 			<tr>
-<!-- 				<th>ID</th> -->
 				<th>NOME</th>
+				<th>EDITAR</th>
+				<th>EXCLUIR</th>
 			</tr>
 		</thead> 
 		<tbody>
 			<c:forEach items="${servicos}" var="a">
- 				<tr>
-<%--  					<td>${a.id}</td> --%>
+ 				<tr class="tblHover">
  					<td>${a.nome}</td>
- 					<td><a href="servicos?id=${a.id}&acao=editar">editar</a></td>
- 					<td><a href="servicos?id=${a.id}&acao=excluir">excluir</a></td>
+ 					<td><a class="btnEditar" href="servicos?id=${a.id}&acao=editar">editar</a></td>
+ 					<td><a class="btnExcluir" href="servicos?id=${a.id}&acao=excluir">excluir</a></td>
  				</tr>
  				</c:forEach>
 		</tbody>
 	</table>
+	
+	<footer>
+		<div class="containertFooter">
+			<div class="footer_menu">
+				<div class="div1"> 
+									SISTEMA DE COBRANÇA || DESENVOLVIDO POR: ALDO PEREIRA E JOÃO VICTOR GONTIJO
+				 </div>
+				
+			</div>
+		</div>
+	</footer>
 </body>
 </html>
