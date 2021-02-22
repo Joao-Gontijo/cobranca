@@ -1,12 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="ISO-8859-1">
-	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-	<title>Serviços</title>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+<title>Insert title here</title>
 </head>
 <body>
 	<header>
@@ -28,25 +27,28 @@
 		</div>
 	</header>
 	
-	<a href="cadastro-servicos.jsp" class="button">Novo Serviço</a>
-	
-	<table  class="tbl" border="1">
+	<a href="cadastro-boletos.jsp" class="button">Novo Boleto</a>
+	<table class="tbl" border="1">
 		<thead>
 			<tr>
-				<th>NOME</th>
-				<th>EDITAR</th>
-				<th>EXCLUIR</th>
+				<th>CÓDIGO</th>
+				<th>VALOR</th>
+				<th>CLIENTE</th>
+				<th>SERVICO</th>
 			</tr>
-		</thead> 
-		<tbody>
-			<c:forEach items="${servicos}" var="a">
- 				<tr class="tblHover">
- 					<td>${a.nome}</td>
- 					<td><a class="btnEditar" href="servicos?id=${a.id}&acao=editar"> <img alt="" src="edit.png" width="25px"> </a></td>
- 					<td><a class="btnExcluir" href="servicos?id=${a.id}&acao=excluir"> <img alt="" src="delete.png" width="25px"></a></td>
- 				</tr>
- 				</c:forEach>
-		</tbody>
+		</thead>
+	<tbody>
+		<c:forEach items="${boletos}" var="a">
+			<tr class="tblHover">
+				<td>${a.codigo}</td>
+				<td>${a.valor}</td>
+				<td>${a.cliente}</td>
+				<td>${a.servico}</td>
+				<td><a class="btnEditar" href="boletos?codigo=${a.codigo}&acao=editar"> <img alt="" src="edit.png" width="25px"></a></td>
+				<td><a class="btnExcluir" href="boletos?codigo=${a.codigo}&acao=excluir"> <img alt="" src="delete.png" width="25px"></a></td>
+				</tr>
+		</c:forEach>
+	</tbody>
 	</table>
 	
 	<footer>

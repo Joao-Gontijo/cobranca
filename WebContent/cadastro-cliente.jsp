@@ -24,6 +24,7 @@
 						<li><a href="clientes"> CLIENTES </a></li>
 <!-- 						<li><a href="cadastro-servicos.jsp"> CADASTRO DE SERVIÇOS </a></li> -->
 						<li><a href="servicos"> SERVIÇOS </a></li>
+						<li><a href="boletos"> BOLETOS</a></li>
 					</ul>
 				</nav>
 			</div>

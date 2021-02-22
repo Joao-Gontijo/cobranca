@@ -1,15 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-<title>SISTEMA DE COBRANÇA</title>
+<title>Cadastro de Boletos</title>
 </head>
-
 <body>
-
 	<header>
 		<div class="container">
 			<div class="logo">
@@ -29,10 +27,22 @@
 		</div>
 	</header>
 	
-	<section id="banner" >
-				
-	</section>
-
+	<form action="boletos" method="post">
+	
+	CÓDIGO <input required type="text" name="input-codigo" size="30" placeholder="000.000.000.000"
+	maxlength="15" value="${boleto.getCodigo}"/>
+	VALOR <input required type="number" name="input-valor" size="30" placeholder="00,00"
+	maxlength="15" value="${boleto.getValor}"/>
+	<p> CLIENTE <select required class="select" id="cbx-cliente" name="cbx-cliente" style="width:80px">
+		<option selected>-------></option>
+	</select></p>
+	<p>SERVIÇO <select required class="select" id="cbx-servico" name="cbx-servico" style="width:80px">
+		<option selected>-------></option>
+	</select></p>
+	
+	<p> <input type="submit" class="button" name="btn=salva" value="salvar"/></p>
+	</form>
+	
 	<footer>
 		<div class="containertFooter">
 			<div class="footer_menu">
@@ -43,7 +53,5 @@
 			</div>
 		</div>
 	</footer>
-
 </body>
-
 </html>

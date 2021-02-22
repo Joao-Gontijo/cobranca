@@ -9,52 +9,48 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import cobranca.controlador.acao.AcaoCarregaDadosCliente;
-import cobranca.controlador.acao.AcaoExcluirCliente;
-import cobranca.controlador.acao.AcaoListagemClientes;
+import cobranca.controlador.acao.AcaoCarregaDadosBoleto;
+import cobranca.controlador.acao.AcaoExcluirBoleto;
+import cobranca.controlador.acao.AcaoListagemBoletos;
+import cobranca.controlador.acao.AcaoSalvaBoletos;
 
-import cobranca.controlador.acao.AcaoSalvaClientes;
-
-
-@WebServlet(urlPatterns = "/clientes")
-public class ClienteControlador extends HttpServlet {
+@WebServlet(urlPatterns = "/boletos")
+public class BoletoControlador extends HttpServlet{
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String acao = req.getParameter("acao");
-		String cnpj = req.getParameter("cnpj");
+		String codigo = req.getParameter("codigo");
 		if(acao != null) {
 			if(acao.equals("editar")) {
-				AcaoCarregaDadosCliente acaoCarregaDadosCliente = new AcaoCarregaDadosCliente(req);
-				String pagina = acaoCarregaDadosCliente.executa();
+				AcaoCarregaDadosBoleto acaoCarregaDadosBoleto = new AcaoCarregaDadosBoleto(req);
+				String pagina = acaoCarregaDadosBoleto.executa();
 				RequestDispatcher dispatcher = req.getRequestDispatcher(pagina);
 				dispatcher.forward(req, resp);
 			}
 			if(acao.equals("excluir")) {
-				if(cnpj != null) {
-					String pagina = new AcaoExcluirCliente(req).executa();
+				if(codigo != null) {
+					String pagina = new AcaoExcluirBoleto(req).executa();
 					RequestDispatcher dispatcher = req.getRequestDispatcher(pagina);
 					dispatcher.forward(req, resp);
 				}
 			}
-			
 		} else {
-			String pagina = new AcaoListagemClientes(req).executa();
+			String pagina = new AcaoListagemBoletos(req).executa();
 			RequestDispatcher dispatcher = req.getRequestDispatcher(pagina);
 			dispatcher.forward(req, resp);
 		}
 	}
-
+	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String pagina = new AcaoSalvaClientes(req).executa();
+		String pagina = new AcaoSalvaBoletos(req).executa();
 		RequestDispatcher dispatcher = req.getRequestDispatcher(pagina);
 		dispatcher.forward(req, resp);
-
 	}
 }
