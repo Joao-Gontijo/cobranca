@@ -1,0 +1,164 @@
+@charset "ISO-8859-1";
+
+	*{
+		margin: 0;
+		padding: 0;
+		font-family: Arial;
+		font-weight: bold;
+	}
+	
+	header {
+		background-color: lightskyblue;
+		display: flex;
+		justify-content: center;
+		height: 120px;
+	}
+	
+	.button {
+		background-color: #39AAE1;
+    	border: solid 1px black;
+    	border-radius:5px;
+    	color: black;
+    	padding: 5px 14px;
+    	text-align: center;
+    	text-decoration: none;
+    	display: inline-block;
+    	font-size: 20px;
+    	margin: 4px 10px;
+    	cursor: pointer;
+	}
+	
+	.btnEditar{
+		display: block;
+		text-decoration: none;
+		text-align: center;
+	}
+	
+	.btnExcluir{
+		display: block;
+		text-decoration: none;
+		text-align: center;
+		color: #FF0000;
+	}
+	
+	.container {
+		background-color: lightskyblue;
+		display: flex;
+		justify-content: space-between;
+		width: 80%;
+	}
+	
+	.containerFooter {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+	
+	.logo {
+		background-color: lightskyblue;
+		display: flex;
+		align-items: center;
+	}
+	
+	.menu {
+		display: flex;
+		align-items: center;
+	}
+	
+	nav ul, nav li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	nav ul {
+		display: flex;
+	}
+	
+	nav a {
+		display: block;
+		padding: 15px;
+		text-decoration: none;
+		color: black;
+	}
+	
+	nav a:hover {
+		background-color: #39aae1;
+		color: #FFF;
+	}
+	
+	footer {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		background-color: #1e1e1e;
+		display: flex;
+		justify-content: center;
+		color: #FFF;
+		height: 20px;
+		padding: 6px 30px;
+	}
+	
+	.footer_menu {
+		display: flex;
+	}
+	
+	.div1 {
+		align-items: center;
+	}
+	
+	#banner {
+		background-image: url('banner.jpeg');
+		background-position: center;
+		background-size: cover;
+		height: 570px;
+	}
+	
+	.tbl {
+		margin-right: 10px;
+		margin-left: 10px;
+		border-collapse: collapse;
+	}
+	
+	.tbl th {
+		border-collapse: collapse;
+		padding: 20px;
+	}
+		
+	.tbl td {
+		padding: 2px 20px;
+	}
+	
+	.tblHover:hover{
+		background-color: #39aae1;
+		color: #FFF;
+	}
+	
+	form {
+		border: 1px solid;
+		padding: 20px;
+		width: 800;
+		margin-bottom: 10px;
+	}
+	
+	form input {
+		padding: 3px;
+		font-size: 20px;
+		width: 100%;
+		display: block;
+		margin-bottom: 20px;
+	}
+	
+	form input[type=submit]{
+		margin-top:20px;
+	}
+	
+	.select{
+		padding: 5px;
+		font-size: 20px;
+	}
+	
+	.ativo {
+		background-color: #39aae1;
+		color: #FFF;
+	}	

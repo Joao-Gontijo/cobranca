@@ -13,7 +13,7 @@ public class AcaoCarregaDadosBoleto {
 	}
 	
 	public String executa() {
-		String codigo = req.getParameter("id");
+		String codigo = req.getParameter("codigo");
 		Boleto boleto = new BoletoDAO().getBoleto(codigo);
 		req.setAttribute("boleto", boleto);
 		return "cadastro-boletos.jsp";

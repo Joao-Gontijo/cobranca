@@ -6,6 +6,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
 import cobranca.entidade.Boleto;
+import cobranca.entidade.Cliente;
+import cobranca.entidade.Servico;
 import cobranca.jpa.util.JPAUtil;
 
 public class BoletoDAO {
@@ -48,5 +50,21 @@ public class BoletoDAO {
 	
 	public Boleto getBoleto(String codigo) {
 		return em.find(Boleto.class, codigo);
+	}
+	
+	public static void main(String[] args) {
+		BoletoDAO dao = new BoletoDAO();
+		ClienteDAO cdao = new ClienteDAO();
+		ServicoDAO sdao = new ServicoDAO();
+		
+		Cliente cliente = new Cliente("d", "e", "f", "g", "h", "j", "k", "l", "m");
+		
+		Servico servico = new Servico("a");
+		Boleto boleto = new Boleto("1", "aaa", 0, cliente, servico);
+		
+		cdao.salvar(cliente);
+		sdao.salvar(servico);
+		dao.salvar(boleto);
+		
 	}
 }

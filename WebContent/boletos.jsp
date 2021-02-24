@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,8 +43,8 @@
 			<tr class="tblHover">
 				<td>${a.codigo}</td>
 				<td>${a.valor}</td>
-				<td>${a.cliente}</td>
-				<td>${a.servico}</td>
+				<td>${a.cliente.nome}</td>
+				<td>${a.servico.nome}</td>
 				<td><a class="btnEditar" href="boletos?codigo=${a.codigo}&acao=editar"> <img alt="" src="edit.png" width="25px"></a></td>
 				<td><a class="btnExcluir" href="boletos?codigo=${a.codigo}&acao=excluir"> <img alt="" src="delete.png" width="25px"></a></td>
 				</tr>

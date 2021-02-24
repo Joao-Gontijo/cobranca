@@ -18,6 +18,14 @@ public class Servico {
     public Servico() {
 		// TODO Auto-generated constructor stub
 	}
+    
+    
+
+	public Servico(String nome) {
+		super();
+		this.nome = nome;
+	}
+
 
 
 	public long getId() {

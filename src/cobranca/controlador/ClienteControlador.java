@@ -48,6 +48,8 @@ public class ClienteControlador extends HttpServlet {
 			RequestDispatcher dispatcher = req.getRequestDispatcher(pagina);
 			dispatcher.forward(req, resp);
 		}
+		
+		
 	}
 
 	@Override

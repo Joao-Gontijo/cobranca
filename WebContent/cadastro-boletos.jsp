@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,11 +34,18 @@
 	maxlength="15" value="${boleto.getCodigo}"/>
 	VALOR <input required type="number" name="input-valor" size="30" placeholder="00,00"
 	maxlength="15" value="${boleto.getValor}"/>
+	
+	
+	<%-- <c:forEach items="${livros}" var="livro">
+    	<option value="${livro.id_prateleiras.id}">${livro.id_prateleiras.descricao}</option>  
+	</c:forEach> --%>
+	
 	<p> CLIENTE <select required class="select" id="cbx-cliente" name="cbx-cliente" style="width:80px">
-		<option selected>-------></option>
+		
 	</select></p>
+	
 	<p>SERVIÇO <select required class="select" id="cbx-servico" name="cbx-servico" style="width:80px">
-		<option selected>-------></option>
+		
 	</select></p>
 	
 	<p> <input type="submit" class="button" name="btn=salva" value="salvar"/></p>
