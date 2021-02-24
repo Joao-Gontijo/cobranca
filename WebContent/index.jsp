@@ -13,18 +13,16 @@
 	<header>
 		<div class="container">
 			<div class="logo">
-				<a href="index.jsp">
-				<img alt="" src="logo1.png">
+				<a href="index.jsp"> <img alt="" src="logo1.png">
 				</a>
 			</div>
 			<div class="menu">
 				<nav>
 					<ul>
-						<li><a class="ativo" href="index.jsp"> INICIO </a></li>
-<!-- 						<li><a href="cadastro-cliente.jsp"> CADASTRO DE CLIENTES </a></li> -->
+						<li><a href="index.jsp"> INICIO </a></li>
 						<li><a href="clientes"> CLIENTES </a></li>
-<!-- 						<li><a href="cadastro-servicos.jsp"> CADASTRO DE SERVIÇOS </a></li> -->
 						<li><a href="servicos"> SERVIÇOS </a></li>
+						<li><a href="boletos"> BOLETOS</a></li>
 					</ul>
 				</nav>
 			</div>
