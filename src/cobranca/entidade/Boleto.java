@@ -7,69 +7,45 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Boleto {
 
-	@Id	
-	private String codigo;
-	
-	private String descricao;
-	private double valor;
-	
-	
-	@ManyToOne
-	private Cliente cliente;
-	@ManyToOne
-	private Servico servico;
-	
-	public Boleto() {
-		// TODO Auto-generated constructor stub
-	}
-	
+	@Id
+	private long id;
 
-	public Boleto(String codigo, String descricao, double valor, Cliente cliente, Servico servico) {
+	private String codigo;
+
+	@ManyToOne
+	private Contrato contrato;
+
+	public Boleto() {
+
+	}
+
+	public Boleto(String codigo, Contrato contrato) {
 		super();
 		this.codigo = codigo;
-		this.descricao = descricao;
-		this.valor = valor;
-		this.cliente = cliente;
-		this.servico = servico;
+		this.contrato = contrato;
 	}
-	
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
 	public String getCodigo() {
 		return codigo;
 	}
-	
+
 	public void setCodigo(String codigo) {
 		this.codigo = codigo;
 	}
-	
-	public String getDescricao() {
-		return descricao;
+
+	public Contrato getContrato() {
+		return contrato;
 	}
-	
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
-	
-	public double getValor() {
-		return valor;
-	}
-	
-	public void setValor(double valor) {
-		this.valor = valor;
-	}
-	
-	public Cliente getCliente() {
-		return cliente;
-	}
-	
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
-	}
-	
-	public Servico getServico() {
-		return servico;
-	}
-	
-	public void setServico(Servico servico) {
-		this.servico = servico;
+
+	public void setContrato(Contrato contrato) {
+		this.contrato = contrato;
 	}
 }

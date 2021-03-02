@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<jsp:include page="header.jsp"></jsp:include>
+<jsp:include page="footer.jsp"></jsp:include>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,24 +11,6 @@
 	<title>Serviços</title>
 </head>
 <body>
-	<header>
-		<div class="container">
-			<div class="logo">
-				<a href="index.jsp"> <img alt="" src="logo1.png">
-				</a>
-			</div>
-			<div class="menu">
-				<nav>
-					<ul>
-						<li><a href="index.jsp"> INICIO </a></li>
-						<li><a href="clientes"> CLIENTES </a></li>
-						<li><a href="servicos"> SERVIÇOS </a></li>
-						<li><a href="boletos"> BOLETOS</a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</header>
 	
 	<a href="cadastro-servicos.jsp" class="button">Novo Serviço</a>
 	
@@ -49,15 +33,5 @@
 		</tbody>
 	</table>
 	
-	<footer>
-		<div class="containertFooter">
-			<div class="footer_menu">
-				<div class="div1"> 
-									SISTEMA DE COBRANÇA || DESENVOLVIDO POR: ALDO PEREIRA E JOÃO VICTOR GONTIJO
-				 </div>
-				
-			</div>
-		</div>
-	</footer>
 </body>
 </html>
