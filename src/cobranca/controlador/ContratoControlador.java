@@ -9,12 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import cobranca.controlador.acao.AcaoCarregaDadosContrato;
-import cobranca.controlador.acao.AcaoClienteContrato;
-import cobranca.controlador.acao.AcaoExcluirContrato;
-import cobranca.controlador.acao.AcaoListagemContratos;
-import cobranca.controlador.acao.AcaoNovoContrato;
-import cobranca.controlador.acao.AcaoSalvaContratos;
+import cobranca.controlador.acao.contratos.AcaoClienteContrato;
+import cobranca.controlador.acao.contratos.AcaoExcluirContrato;
+import cobranca.controlador.acao.contratos.AcaoListagemContratos;
+import cobranca.controlador.acao.contratos.AcaoNovoContrato;
+import cobranca.controlador.acao.contratos.AcaoSalvaContratos;
 
 @WebServlet(urlPatterns = "/contratos")
 public class ContratoControlador extends HttpServlet{
@@ -31,12 +30,6 @@ public class ContratoControlador extends HttpServlet{
 		String cnpj = req.getParameter("cnpj");
 		
 		if(acao != null) {
-//			if(acao.equals("editar")) {
-//				AcaoCarregaDadosContrato acaoCarregaDadosBoleto = new AcaoCarregaDadosContrato(req);
-//				String pagina = acaoCarregaDadosBoleto.executa();
-//				RequestDispatcher dispatcher = req.getRequestDispatcher(pagina);
-//				dispatcher.forward(req, resp);
-//			}
 			if(acao.equals("excluir")) {
 				if(id != null) {
 					String pagina = new AcaoExcluirContrato(req).executa();

@@ -32,7 +32,7 @@
 				<td>${a.servico.nome}</td>
 				<%-- <td><a class="btnEditar" href="contratos?codigo=${a.codigo}&acao=editar"> <img alt="" src="edit.png" width="25px"></a></td> --%>
 				<td><a class="btnExcluir" href="contratos?id=${a.id}&acao=excluir"> <img alt="" src="delete.png" width="25px"></a></td>
-				<td><a class="btnExcluir" href="boletos"> Gerar Boleto </a></td>
+				<td><a class="btnExcluir" href="boletos?id=${a.id}&acao=contratos"> Gerar Boleto </a></td>
 				</tr>
 		</c:forEach>
 	</tbody>

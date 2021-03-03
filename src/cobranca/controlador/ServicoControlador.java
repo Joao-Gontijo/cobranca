@@ -9,10 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import cobranca.controlador.acao.AcaoCarregaDadosServico;
-import cobranca.controlador.acao.AcaoExcluiServico;
-import cobranca.controlador.acao.AcaoListagemServicos;
-import cobranca.controlador.acao.AcaoSalvaServicos;
+import cobranca.controlador.acao.servicos.AcaoCarregaDadosServico;
+import cobranca.controlador.acao.servicos.AcaoExcluiServico;
+import cobranca.controlador.acao.servicos.AcaoListagemServicos;
+import cobranca.controlador.acao.servicos.AcaoSalvaServicos;
 
 @WebServlet(urlPatterns = "/servicos")
 public class ServicoControlador extends HttpServlet{

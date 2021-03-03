@@ -9,11 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import cobranca.controlador.acao.AcaoCarregaDadosCliente;
-import cobranca.controlador.acao.AcaoExcluirCliente;
-import cobranca.controlador.acao.AcaoListagemClientes;
-
-import cobranca.controlador.acao.AcaoSalvaClientes;
+import cobranca.controlador.acao.cliente.AcaoCarregaDadosCliente;
+import cobranca.controlador.acao.cliente.AcaoExcluirCliente;
+import cobranca.controlador.acao.cliente.AcaoListagemClientes;
+import cobranca.controlador.acao.cliente.AcaoSalvaClientes;
 
 
 @WebServlet(urlPatterns = "/clientes")
