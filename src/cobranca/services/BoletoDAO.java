@@ -1,11 +1,13 @@
 package cobranca.services;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
 import cobranca.entidade.Boleto;
+import cobranca.entidade.Contrato;
 import cobranca.jpa.util.JPAUtil;
 
 public class BoletoDAO {
@@ -49,5 +51,15 @@ public class BoletoDAO {
 	
 	public Boleto getBoleto(long id) {
 		return em.find(Boleto.class, id);
+	}
+	
+	public static void main(String[] args) {
+		Contrato contrato = new ContratoDAO().getContrato(1);
+		
+		Boleto boleto = new Boleto("157", new Date("2021/03/02"), contrato);
+		
+		BoletoDAO dao = new BoletoDAO();
+		
+		dao.salvar(boleto);
 	}
 }
