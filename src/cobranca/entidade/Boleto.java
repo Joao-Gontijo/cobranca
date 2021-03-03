@@ -1,8 +1,12 @@
 package cobranca.entidade;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class Boleto {
@@ -12,6 +16,9 @@ public class Boleto {
 
 	private String codigo;
 
+	@Temporal(TemporalType.DATE)
+	private Date data;
+
 	@ManyToOne
 	private Contrato contrato;
 
@@ -19,9 +26,10 @@ public class Boleto {
 
 	}
 
-	public Boleto(String codigo, Contrato contrato) {
+	public Boleto(String codigo, Date data, Contrato contrato) {
 		super();
 		this.codigo = codigo;
+		this.data = data;
 		this.contrato = contrato;
 	}
 
@@ -39,6 +47,14 @@ public class Boleto {
 
 	public void setCodigo(String codigo) {
 		this.codigo = codigo;
+	}
+
+	public Date getData() {
+		return data;
+	}
+
+	public void setData(Date data) {
+		this.data = data;
 	}
 
 	public Contrato getContrato() {
