@@ -12,8 +12,10 @@
 <body>
 	<h1 style="margin-left: 10px">BOLETO</h1>
 	<%-- <h2 style="margin-left: 10px">Cliente: ${contrato.getCliente().getNome()}</h2> --%>
+	
 	<table class="tbl" border="1">
-
+	
+	
 		<thead>
 			<tr>
 				<!-- <th>CODIGO DO CONTRATO</th> -->
@@ -33,6 +35,6 @@
 		</tbody>
 	</table>
 	
-	<a class="button" href="boletos?acao=gerar$id=${contrato.id}">Download</a>
+	<a class="button" href="boletos?acao=gerar&id=${contrato.id}">Download</a>
 </body>
 </html>
